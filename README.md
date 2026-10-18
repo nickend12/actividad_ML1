@@ -1,7 +1,9 @@
 # actividad_ML1
 
-Integrantes:
-Rober Andres Castillo
+# Integrantes:
+
+Rober Andres Castillo /
+
 Oscar Javier Garcia
 
 ## Reporte del proyecto
