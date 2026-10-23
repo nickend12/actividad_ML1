@@ -37,10 +37,10 @@ jobs:
           .venv/bin/python -m pip install --upgrade pip
           .venv/bin/python -m pip install -r requirements.txt
 
-      - name: Limpiar datos y reportes generados
+      - name: Preparar carpetas de trabajo
         run: |
           mkdir -p datos reportes
-          find datos -mindepth 1 -delete
+          # Se limpian los reportes generados previamente, pero NUNCA la carpeta 'datos'
           find reportes -mindepth 1 -delete
 
       - name: Ejecutar Semana 1.ipynb
@@ -64,4 +64,5 @@ jobs:
           fi
 
           git commit -m "chore: actualizar resultados de Semana 1 [skip ci]"
-          git push origin HEAD:main
+          git pull --rebase origin main
+          git push origin main
